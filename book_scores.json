@@ -1,0 +1,141 @@
+[
+  {
+    "before": {
+      "phase": "before",
+      "overall_score": 748,
+      "rubric": [
+        {
+          "name": "Clarity & Accessibility",
+          "weight_percent": 15,
+          "score": 830,
+          "reason": "Familiar examples, explained equations, and clear definitions make difficult physics approachable. Some analogies obscure distinctions between efficient descriptions and physical mechanisms."
+        },
+        {
+          "name": "Actionable Value",
+          "weight_percent": 14,
+          "score": 570,
+          "reason": "Provides useful conceptual tools and questions for evaluating computational interpretations of physics, but few exercises, worked applications, or practical methods for independently assessing claims."
+        },
+        {
+          "name": "Credibility & Accuracy",
+          "weight_percent": 13,
+          "score": 540,
+          "reason": "All 111 citation keys resolve, and evidence notes acknowledge uncertainty. However, restricted quantum reachability is overstated as general efficient compression, and claims that decoherence produces definite outcomes conflict with the manuscript's own caveats and the distinction explained in [Schlosshauer's review](https://arxiv.org/abs/quant-ph/0312059)."
+        },
+        {
+          "name": "Engaging Storytelling",
+          "weight_percent": 12,
+          "score": 810,
+          "reason": "The glass-of-water framing, universe-building thought experiment, and historical discoveries sustain curiosity. Repeated software comparisons become predictable, and historical figures rarely develop beyond brief anecdotes."
+        },
+        {
+          "name": "Strong Structure & Flow",
+          "weight_percent": 11,
+          "score": 865,
+          "reason": "The five-part progression moves coherently from computational obstacles through proposed shortcuts to cosmic implications. Chapter maps and transitions help navigation, although entropy, compression, and rendering arguments recur extensively."
+        },
+        {
+          "name": "Authentic Voice & Tone",
+          "weight_percent": 10,
+          "score": 800,
+          "reason": "The conversational engineering perspective is distinctive and consistent. Formulaic rhetorical turns and emphatic declarations sometimes weaken the otherwise candid treatment of uncertainty."
+        },
+        {
+          "name": "Clear Purpose & Promise",
+          "weight_percent": 9,
+          "score": 840,
+          "reason": "The introduction clearly promises a computational lens rather than proof of simulation or design. The conclusion exceeds that promise by asserting that physical detail goes uncomputed and that frugal laws establish computability."
+        },
+        {
+          "name": "Reader Empathy",
+          "weight_percent": 7,
+          "score": 840,
+          "reason": "Optional equations, reading routes, glossary definitions, and misconception boxes support nonspecialists. Readers receive reassurance, but limited opportunities to check understanding before increasingly abstract claims."
+        },
+        {
+          "name": "Visual & Structural Aids",
+          "weight_percent": 5,
+          "score": 680,
+          "reason": "Chapter maps, takeaway boxes, equations, and the glossary provide strong textual scaffolding. No diagrams, charts, or comparative tables illustrate light cones, interference, scale hierarchies, or holography."
+        },
+        {
+          "name": "Inspiring & Uplifting Tone",
+          "weight_percent": 4,
+          "score": 830,
+          "reason": "Everyday examples cultivate wonder and intellectual confidence, while the closing return to the water glass is memorable. Some inspirational force depends on presenting speculative computational interpretations too conclusively."
+        }
+      ],
+      "summary": "The manuscript is an engaging, accessible conceptual tour with a strong organizing premise and coherent structure. Its principal weakness is the recurring shift from useful computational analogies to unsupported claims about how nature actually operates, despite substantial citations and explicit caveats. Limited reader applications and absent explanatory graphics also constrain its score. The weighted result is 748.45, rounded to 748."
+    },
+    "after": {
+      "phase": "after",
+      "overall_score": 830,
+      "rubric": [
+        {
+          "name": "Clarity & Accessibility",
+          "weight_percent": 15,
+          "score": 860,
+          "reason": "Concrete examples and comparison tables clarify the distinction between descriptions and mechanisms. Some technical passages remain dense, and repeated qualifications occasionally interrupt explanations."
+        },
+        {
+          "name": "Actionable Value",
+          "weight_percent": 14,
+          "score": 795,
+          "reason": "Seven practice boxes and a reusable four-question checklist help readers assess claims independently. Most exercises remain brief conceptual checks rather than sustained applications."
+        },
+        {
+          "name": "Credibility & Accuracy",
+          "weight_percent": 13,
+          "score": 775,
+          "reason": "Major overclaims are corrected, cosmological forecasts are qualified, and all 116 citation keys resolve. Some broad assertions and simplified explanations remain insufficiently qualified; citation completeness does not establish source accuracy."
+        },
+        {
+          "name": "Engaging Storytelling",
+          "weight_percent": 12,
+          "score": 805,
+          "reason": "The water glass, simulated forest, and coffee examples remain memorable. Repeated analogy-and-limitation sequences sometimes slow momentum, while historical episodes remain mostly brief illustrations."
+        },
+        {
+          "name": "Strong Structure & Flow",
+          "weight_percent": 11,
+          "score": 860,
+          "reason": "The five-part progression, chapter maps, and shorter conclusion provide clear navigation. Some new explanatory aids duplicate neighboring prose, and older engineering framing occasionally clashes with revised qualifications."
+        },
+        {
+          "name": "Authentic Voice & Tone",
+          "weight_percent": 10,
+          "score": 825,
+          "reason": "Reduced hype and a more reflective ending strengthen the companionable voice. Repeated corrective formulations and occasional promotional language still make portions feel mechanically organized."
+        },
+        {
+          "name": "Clear Purpose & Promise",
+          "weight_percent": 9,
+          "score": 900,
+          "reason": "The revised subtitle, introduction, and conclusion consistently promise an engineering lens and critical-reading method. Some part and chapter titles still imply stronger computational conclusions."
+        },
+        {
+          "name": "Reader Empathy",
+          "weight_percent": 7,
+          "score": 870,
+          "reason": "Optional reading routes, plain-language examples, and worked checks support beginners without demanding agreement. Later theoretical sections still require substantial conceptual effort."
+        },
+        {
+          "name": "Visual & Structural Aids",
+          "weight_percent": 5,
+          "score": 810,
+          "reason": "Four comparison tables and a decoherence diagram complement the glossary and callouts. Spatial ideas such as light cones and holographic boundaries still rely largely on prose."
+        },
+        {
+          "name": "Inspiring & Uplifting Tone",
+          "weight_percent": 4,
+          "score": 820,
+          "reason": "The manuscript encourages curiosity and confidence in asking better questions. Its more restrained conclusion earns trust, though frequent cautions sometimes diminish the sense of discovery."
+        }
+      ],
+      "summary": "The revised manuscript offers stronger scientific calibration, practical claim-checking tools, and clearer explanatory aids. Remaining weaknesses include residual overgeneralizations, repetitive analogy-and-caveat structures, and limited visual explanation of spatial concepts. The weighted score is 829.95, rounded to 830, compared with 748 before revision."
+    },
+    "delta": 82,
+    "generated_at": "2026-10-27T14:03:51",
+    "run_dir": "/Users/ryanhamilton/pythonenv/simulation theory/codex_runs/book-revision-20261027-134638"
+  }
+]

@@ -1,0 +1,156 @@
+\chapter{Server Sharding and Lossy History}
+
+\begin{chaptermapbox}
+\textbf{In this chapter:}
+\begin{compactchecklist}
+\item Sharding in large online systems, and why splitting a world into separate pieces helps it scale
+\item Dark energy, the accelerating expansion, and the cosmic horizon that cuts regions apart forever
+\item Why each observer's universe has a finite memory limit
+\item The arrow of time and lossy compression: why the past leaves records and the future doesn't
+\item Scrambling, black holes, and whether history is ever truly deleted
+\end{compactchecklist}
+\end{chaptermapbox}
+
+A popular online game might have millions of players. No single server can handle them all. So the game's world is split into shards: separate copies or separate regions, each running on its own hardware, each with its own population of players. Within a shard, everyone can see and interact with everyone else. Between shards, interaction is limited or impossible.
+
+Big websites do the same with their databases. Rather than keeping every user's records in one enormous table, they split users by region, or by some other rule, so that each server only has to handle its own slice. The whole system scales because most operations only touch a single shard. Cross-shard operations are rare, expensive, and avoided wherever possible.
+
+If dark energy remains a positive cosmological constant, distant unbound regions become permanently inaccessible to one another. Sharding is a useful comparison for that loss of causal access. Alongside it, scrambling limits what local observers can recover about the past. Neither observation determines the total computational cost of the cosmos.
+
+\section{Metric Expansion and Dark Energy as Server Sharding}
+
+\subsection{An Expanding Universe}
+
+In the 1920s, Edwin Hubble and others found that distant galaxies are moving away from us, and that the farther away a galaxy is, the faster it recedes. The explanation, in general relativity, is that space itself is expanding. Galaxies aren't flying through space away from a central point. The space between galaxies is stretching, carrying them apart, and there's no center.
+
+For most of the twentieth century, astronomers expected that the expansion would be slowing down. Gravity pulls everything toward everything else, so it should act as a brake. The only question seemed to be whether the brake was strong enough to eventually stop the expansion and pull everything back together.
+
+\subsection{The Brake That Turned Out to Be an Accelerator}
+
+In 1998, two teams of astronomers studying distant exploding stars reached the same astonishing conclusion \cite{riess1998,perlmutter1999}. The expansion isn't slowing down. It's speeding up.
+
+Something is pushing space apart, and doing so more strongly than gravity pulls it together on the largest scales. Astronomers named this something dark energy. Measurements since then suggest it makes up about 68 percent of the total energy content of the universe \cite{planck2018}. The simplest explanation is a cosmological constant: a fixed energy density belonging to empty space itself, which Einstein had introduced and later abandoned. The 2011 Nobel Prize in Physics went to Saul Perlmutter, Brian Schmidt, and Adam Riess for the discovery.
+
+\subsection{The Cosmic Horizon}
+
+Expansion sustained by a positive cosmological constant has a dramatic consequence. There are galaxies whose light, emitted today, will never reach us, no matter how long we wait. The space between us and them is stretching so quickly that their light, traveling toward us at the speed of light, loses ground. It's like trying to walk to the end of a moving walkway that's lengthening faster than you can walk.
+
+The boundary beyond which this happens is called the cosmic event horizon. In the standard cosmological-constant model, it lies roughly sixteen billion light-years away, measured in present-day distances. Events happening beyond it now can never affect us. Events happening here now can never affect anything beyond it. As the expansion continues, more and more galaxies slip past that boundary.
+
+\begin{examplebox}
+Here is a conditional timeline assuming dark energy remains a positive cosmological constant \cite{loeb2002,krauss2007}.
+
+\begin{compactchecklist}
+\item \textbf{Today:} We can see galaxies across the observable universe, tens of billions of light-years in radius. But the most distant ones we see are already beyond the event horizon; we're seeing old light, and we can never exchange new signals with them.
+\item \textbf{The Local Group's future:} A Milky Way--Andromeda merger is possible, not certain. A 2025 analysis found close to a 50 percent probability of no merger within ten billion years after allowing for uncertain galaxy positions, velocities, masses, and the influence of other Local Group members \cite{sawala2025collision}. Gravitationally bound systems need not be pulled apart by cosmological-constant expansion.
+\item \textbf{Around a hundred billion years from now and beyond:} Galaxies outside the Local Group will have receded so far, and their light will be so stretched, that they'll become effectively invisible. Astronomers in a remaining bound galactic system would see a single island of stars in an apparently empty, dark universe.
+\end{compactchecklist}
+
+In that cosmological scenario, surviving bound structures become increasingly isolated.
+\end{examplebox}
+
+\subsection{Reading It as Sharding}
+
+Now apply the software lens.
+
+Chapter~5 described local causal influence. With a persistent positive cosmological constant, future event horizons further limit which signals a given observer can ever receive. Past correlations do not disappear when future communication becomes impossible.
+
+This resembles sharding only in the restricted sense of lost communication between distant regions. Cosmic event horizons are observer-dependent; they are not a fixed partition into disjoint servers. Bound structures can continue interacting internally while signals from sufficiently distant regions never arrive.
+
+Permanent isolation depends on the future expansion history, not merely on acceleration measured today. The cosmological-constant model supplies one such history; an evolving dark-energy model can give a different one.
+
+\subsection{A Finite Memory per Observer}
+
+The cap is more than a figure of speech. It connects directly to the holographic principle from Chapter~8.
+
+In 1977, Gary Gibbons and Stephen Hawking showed that a cosmic event horizon behaves thermodynamically like a black hole's horizon \cite{gibbonshawking1977}. It has a temperature, though an incredibly low one, and it has an entropy proportional to its area. For a horizon at the scale implied by the standard cosmological-constant model, that entropy is around \(10^{122}\) in natural units, corresponding to roughly that many bits.
+
+That number has a striking interpretation. If entropy bounds apply to cosmic horizons, then the total amount of information that can ever be contained in, or accessed from, the region any observer can causally interact with is finite \cite{bousso2002}. This is a proposed bound on the entropy associated with an observer's causal region in that model, not a measured computer-memory capacity or a bound on the entire universe.
+
+\begin{researchnotebox}
+\textbf{Well supported (observation):} The evidence for accelerated expansion motivates dark-energy models. \textbf{Promising but limited (forecast):} A persistent positive cosmological constant implies event horizons and growing isolation of surviving bound structures. This future is conditional on the model.
+
+\textbf{Promising but limited:} Cosmic horizons have a temperature and entropy proportional to their area, by close analogy with black holes.
+
+\textbf{Open:} What dark energy is. A cosmological constant fits the data, but its observed value is about 120 orders of magnitude smaller than naive estimates from quantum field theory, which is one of the largest mismatches between theory and observation in all of physics \cite{weinberg1989}. DESI DR2 baryon acoustic oscillation measurements, combined with cosmic microwave background data and supernova samples such as Pantheon+, Union3, or DES Year~5, show a preference for evolving dark energy in a fitted two-parameter equation-of-state model \cite{desi2025dr2}. Its strength depends on the data combination and model. This is not a confirmed change in dark energy, but it cautions against unconditional forecasts.
+\end{researchnotebox}
+
+\section{The Arrow of Time and Lossy Compression}
+
+\subsection{The Direction of Time}
+
+Reversible microscopic evolution does not by itself explain the macroscopic arrow of time. Reversibility here means recoverability of the state under the dynamics, not a claim that every interaction is invariant under time reversal. Run a film of two billiard balls colliding backward, and it looks perfectly legitimate. Yet our experience of time is profoundly one-directional. We remember yesterday but not tomorrow. Eggs break and don't unbreak. People grow older, never younger.
+
+In 1928, the astronomer Arthur Eddington called this asymmetry ``the arrow of time,'' and identified it with the increase of entropy \cite{eddington1928}. Time's arrow points in the direction in which disorder grows.
+
+But that only moves the question back. Why does entropy increase in the direction we call the future? The answer, according to most physicists and philosophers who study it, is that the universe began in a state of extraordinarily low entropy, the smooth, uniform state described in Chapter~9. Everything since has been a long slide from that special beginning toward equilibrium. David Albert calls the assumption of that low-entropy beginning the Past Hypothesis \cite{albert2000}. The arrow of time isn't built into the laws. It's built into the starting conditions.
+
+\subsection{Why the Past Leaves Records}
+
+Here's a question that sounds simple and turns out to be deep. Why do we have records of the past and not of the future?
+
+A record is a piece of low-entropy structure that's correlated with some event: a footprint in mud, a photograph, a memory in a brain, a layer of rock containing fossils. Making a record involves an interaction that leaves behind organized, lasting structure. And in a universe where entropy increases toward the future, those interactions naturally leave traces that point backward. The footprint forms after the foot presses down, not before.
+
+Ordinary records are correlated with earlier events because of the physical history that formed them. This is a statement about accessible records under the low-entropy boundary condition, not proof that the future is being computed or that memory is saved by omitting it.
+
+\subsection{Lossy Compression}
+
+Even the records of the past are far from complete. That's the next piece of the picture.
+
+When you save a photograph as a JPEG file, the software throws away fine detail that the human eye is unlikely to notice: subtle variations in color, the finest textures. The file is much smaller, and the picture looks nearly the same. When you listen to an MP3, frequencies that your ear can't distinguish from louder neighboring sounds have been discarded. This is called lossy compression. You keep the parts that matter for the purpose and throw away the rest.
+
+The universe's record of its own past works the same way. The broad outlines survive. Starlight from distant galaxies carries a record of what they looked like billions of years ago. The cosmic microwave background, from Chapter~9, is a record of the universe at 380,000 years old. Rocks preserve the history of the Earth; DNA preserves the history of life. But the microscopic details, the exact position of every molecule at every moment, are not preserved in any accessible form. They've been converted, by the processes of Chapter~6, into thermal noise.
+
+\begin{examplebox}
+Think about the light from a candle that burned in a medieval cathedral eight hundred years ago. Its photons warmed the stone walls, scattered off dust, and were absorbed. That energy became heat, spread into the building, radiated into the air, and eventually escaped into space as infrared radiation.
+
+Is the information about that candle's flame still in the universe? In principle, quantum mechanics says yes; nothing is ever truly deleted. In practice, it's been spread into correlations among so many particles across so vast a region that no practical measurement available to us could recover it. The coarse summary, ``there were candles in medieval cathedrals,'' survives in documents. The fine detail is gone.
+\end{examplebox}
+
+\subsection{Scrambling}
+
+Physicists have a name for the process by which local information gets spread so thoroughly through a system that it can't be recovered from any small part: scrambling.
+
+Imagine dropping a single drop of ink into a glass of water. At first, you could find the ink easily; it's all in one place. As it spreads, you'd have to look at more and more of the glass to find it. When it's fully mixed, the information about where the ink started is spread across every molecule in the glass. To recover it, you'd need to measure them all, with perfect precision, and run the laws of physics backward.
+
+Quantum systems scramble information through entanglement, as Chapter~6 described in the context of thermalization. Information initially stored in a few particles spreads into entangled correlations among more and more particles, until it's encoded only in the global state of the whole system.
+
+\subsection{Black Holes: The Fastest Scramblers}
+
+The most extreme case is the black hole. In 2008, Yasuhiro Sekino and Leonard Susskind argued that black holes are the fastest scramblers in nature \cite{sekinosusskind2008}. Information that falls in gets spread across the black hole's entire horizon in a time that grows only logarithmically with the number of degrees of freedom, as fast as any physical system allows. A later result by Juan Maldacena, Stephen Shenker, and Douglas Stanford put a precise speed limit on how quickly chaos can grow in a quantum system, and black holes saturate it \cite{maldacena2016}.
+
+That brings us back to Hawking's 1976 worry from Chapter~6. Black holes slowly evaporate through Hawking radiation. A black hole with the mass of the Sun would take about \(10^{67}\) years to evaporate completely. If the radiation is purely thermal, carrying no information about what fell in, then when the black hole is gone, the information is gone too. That would mean the universe genuinely deletes data, breaking the reversibility of quantum mechanics.
+
+Most physicists now believe this doesn't happen. In 1993, Don Page showed what the entanglement of the radiation would have to look like over time if information is preserved \cite{page1993}. In 2007, Patrick Hayden and John Preskill showed that, once a black hole is old enough, information thrown into it could in principle come back out in the radiation surprisingly quickly \cite{haydenpreskill2007}. And in 2019 and 2020, new calculations by Geoff Penington and, independently, by a group including Ahmed Almheiri, reproduced Page's curve from first principles in simplified models \cite{penington2020,almheiri2019}.
+
+\begin{researchnotebox}
+\textbf{Promising but limited:} Recent theoretical work, building on holography, gives strong evidence that information is preserved in black hole evaporation, emerging in subtle correlations in the Hawking radiation.
+
+\textbf{Open:} The detailed mechanism, and whether these model calculations fully apply to real black holes in our universe, remain active research questions. The information paradox is widely viewed as close to resolved in principle, but not settled.
+\end{researchnotebox}
+
+If this picture is right, then black holes are the ultimate lossy compressors in practice, and perfectly lossless in principle. They take whatever falls in, scramble it as quickly as physics allows, and release it, over \(10^{67}\) years or more, as a faint, nearly thermal glow in which the original information is hidden in correlations whose recovery would present extraordinary practical difficulties.
+
+\subsection{Keeping the Memory Load Bounded}
+
+The two limits concern what an observer can access.
+
+\textbf{Spatially,} a persistent positive cosmological constant produces event horizons. Horizon entropy bounds offer a theoretical account of finite information capacity in a causal region.
+
+\textbf{Temporally,} accessible records preserve only selected aspects of the past. Scrambling distributes microscopic information into correlations that local measurements cannot generally recover.
+
+\textbf{In principle,} nothing is ever deleted. Quantum mechanics preserves the fine-grained information. But it's moved into a form that no part of the universe can practically read, just like the unreachable memory of Chapter~6's garbage collector.
+
+These arguments concern accessible information and horizon entropy in specified settings. They do not demonstrate that the total microscopic state becomes simpler, or that nature reduces its computational workload over time.
+
+\subsection{The Final Flat State}
+
+If dark energy is a true cosmological constant, the long-term future is quiet. Stars will burn out over the next hundred trillion years. Black holes will evaporate over unimaginably longer times. Eventually, each shard of the universe will approach a state of maximum entropy: a cold, nearly empty space filled with a faint glow at the horizon's temperature.
+
+That state, sometimes called heat death, is the ultimate flat buffer. It's described by almost nothing: the value of the cosmological constant and the temperature of the horizon. Every structure that ever existed has been folded into the background. The macroscopic description would become simple, while the interpretation of microscopic information in such a future remains a theoretical question.
+
+It is an eerie conditional forecast: familiar structures would disappear from view and eventually decay. The sharding comparison helps picture the loss of contact; it does not explain why this expansion history would occur.
+
+\begin{keytakeawaybox}
+If a positive cosmological constant persists, horizons limit future communication; scrambling separately limits access to past detail, without establishing a saving in nature's computational workload.
+\end{keytakeawaybox}

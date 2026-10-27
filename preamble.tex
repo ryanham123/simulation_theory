@@ -1,0 +1,213 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{sectsty}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+% Readable, ragged-right paragraph columns for the worked comparison tables.
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[most]{tcolorbox}
+\hypersetup{
+    hidelinks
+}
+
+\sectionfont{\Large\bfseries}
+\subsectionfont{\large\bfseries}
+\chapterfont{\Huge\bfseries}
+
+% Core teaching callouts used throughout the manuscript:
+% Evidence Note      = research context and confidence levels
+% Safety Note        = cautions and limits
+% What to Do Tonight = immediate reader action
+% Other callouts add examples, practice prompts, or reader guidance more sparingly.
+\newtcolorbox{keytakeawaybox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Key Takeaway,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{safetynotebox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Safety Note,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{beginnermistakebox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Common Pitfall,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{researchnotebox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Evidence Note,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{mythvsfactbox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Myth vs.\ Fact,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{commonquestionbox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Common Question,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{quickpracticebox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Quick Practice,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{tonightbox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=What to Do Tonight,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{examplebox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Example,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{whyitmattersbox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Why It Matters,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{readerstorybox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Reader Story,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newtcolorbox{chaptermapbox}{
+    enhanced jigsaw,
+    breakable,
+    colback=white,
+    colframe=black,
+    title=Chapter Map,
+    fonttitle=\bfseries,
+    boxrule=0.6pt,
+    arc=0pt,
+    left=0.8em,
+    right=0.8em,
+    top=0.6em,
+    bottom=0.6em
+}
+
+\newenvironment{compactchecklist}
+  {\begin{itemize}[leftmargin=1.4em,itemsep=0.25em,topsep=0.25em]}
+  {\end{itemize}}

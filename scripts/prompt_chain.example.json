@@ -1,0 +1,14 @@
+{
+  "continue_session": true,
+  "full_auto": true,
+  "steps": [
+    {
+      "name": "first_prompt",
+      "prompt": "Read scripts/export_tts_text.py and write a short reusable prompt for improving its docstring and CLI help text."
+    },
+    {
+      "name": "second_prompt",
+      "prompt": "Take the previous result and turn it into a cleaner final prompt I can reuse later. Keep it concise.\\n\\nPrevious output:\\n{{previous_output}}"
+    }
+  ]
+}
